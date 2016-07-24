@@ -17,7 +17,7 @@ const stylusLoaders = [
 
 module.exports = {
   entry: {
-    index: './index.js',
+    main: './main.js',
     vendors: [
       'react',
       'react-dom',
@@ -44,7 +44,7 @@ module.exports = {
       //   loader: ExtractTextPlugin.extract('style-loader', sassLoaders.join('!'))
       // },
       {
-        test: /\.stylus$/,
+        test: /\.styl$/,
         loader: ExtractTextPlugin.extract('style-loader', stylusLoaders.join('!'))
       },
       {
@@ -68,6 +68,6 @@ module.exports = {
     })
   ],
   resolve: {
-    extensions: ['', '.js', '.jsx', '.css', '.sass', '.json']
+    extensions: ['', '.js', '.jsx', '.css', '.styl', '.json']
   }
 }
