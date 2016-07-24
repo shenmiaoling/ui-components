@@ -3,10 +3,16 @@ const webpack = require('webpack')
 const autoprefixer = require('autoprefixer')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
-const sassLoaders = [
+// const sassLoaders = [
+//   'css-loader',
+//   'postcss-loader',
+//   'sass-loader?indentedSyntax=sass'
+// ]
+
+const stylusLoaders = [
   'css-loader',
   'postcss-loader',
-  'sass-loader?indentedSyntax=sass'
+  'stylus-loader'
 ]
 
 module.exports = {
@@ -33,9 +39,13 @@ module.exports = {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
       },
+      // {
+      //   test: /\.sass$/,
+      //   loader: ExtractTextPlugin.extract('style-loader', sassLoaders.join('!'))
+      // },
       {
-        test: /\.sass$/,
-        loader: ExtractTextPlugin.extract('style-loader', sassLoaders.join('!'))
+        test: /\.stylus$/,
+        loader: ExtractTextPlugin.extract('style-loader', stylusLoaders.join('!'))
       },
       {
         test: /\.(jpeg|jpg|png|gif)$/,
