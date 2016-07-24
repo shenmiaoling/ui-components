@@ -1,3 +1,4 @@
+require('pills/dist/pills')
 require('bootstrap/dist/css/bootstrap.css')
 require('file?name=[name].[ext]!bootstrap/dist/css/bootstrap.css.map')
 

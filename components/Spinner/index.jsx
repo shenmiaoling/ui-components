@@ -1,9 +1,10 @@
 import React from 'react'
 
+require('./styles')
+
 module.exports = React.createClass({
   render() {
-    return <div className="pages-404">
-      <h1 className="display-1 text-xs-center">404</h1>
+    return <div className="loader">
     </div>
   }
 })
